@@ -22,7 +22,7 @@
 
 
 .content table {
-    color: var(--dark);
+    color: var(--bg);
 }
 
 .content blockquote {
@@ -33,11 +33,11 @@
 }
 
 .content blockquote p {
-    color: var(--white);
+    color: var(--fg);
 }
 
 .content pre code {
-    color: var(--white);
+    color: var(--fg);
 }
 
 .content pre,
@@ -45,13 +45,13 @@
 .content .highlight>pre,
 .content td.code pre {
     background-color: #FAFAFA;
-    background-image: linear-gradient(var(--dark) 50%, var(--dark-light) 50%);
+    background-image: linear-gradient(var(--bg) 50%, var(--bg-alt) 50%);
     background-repeat: repeat;
     background-size: 3em 3em;
     background-position: 0px 10px;
-    border: 1px solid var(--main-light);
-    border-left: 5px solid var(--main-light);
-    border-right: 5px solid var(--main-light);
+    border: 1px solid var(--main-alt);
+    border-left: 5px solid var(--main-alt);
+    border-right: 5px solid var(--main-alt);
     margin-top: 1em;
     margin-bottom: 1em;
     border-radius: 4px;

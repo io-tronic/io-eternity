@@ -3,17 +3,28 @@
 {{ partial "slides/columns" (dict  "portfolioScratch" $portfolioScratch "portfolioMobileScratch" $portfolioMobileScratch "ctx" .) }}
 
 {{ partial "header.html" . }}
-{{ partial "navbar.html" . }}
 
-<section id="desktop" class="section work">
-	{{ partial "helpers/hidden-menu.html" . }}
-	{{ partial "slides/slider" (dict "scratch" $portfolioScratch "type" "desktop" "ctx" .) }}
-</section>
+<div class="pagecontainer"> 
+	<div class="pagecontainer" style="margin:5px; border-radius:20px">
 
-<section id="mobile" class="section work">
-	{{ partial "helpers/hidden-menu.html" . }}
-	{{ partial "slides/slider" (dict "scratch" $portfolioMobileScratch "type" "mobile" "ctx" .) }}
-</section>
+		{{ partial "navbar.html" . }}
 
-{{ partial "slides/slides" $portfolioScratch }}
+		<div class="sliderbg" id="sliderbg"> </div>
+
+		<section id="desktop" class="section work">
+			{{ partial "helpers/hidden-menu.html" . }}
+			{{ partial "slides/slider" (dict "scratch" $portfolioScratch "type" "desktop" "ctx" .) }}
+		</section>
+
+		<section id="mobile" class="section work">
+			{{ partial "helpers/hidden-menu.html" . }}
+			{{ partial "slides/slider" (dict "scratch" $portfolioMobileScratch "type" "mobile" "ctx" .) }}
+		</section>
+
+		{{ partial "slides/slides" $portfolioScratch }}
+
+
+	</div>
+</div>
+
 {{ partial "footer" . }}

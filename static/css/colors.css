@@ -1,8 +1,9 @@
 :root {
     --main: #000000;
-    --main-light: #000000;
-    --dark: #ffffff;
-    --dark-light: #797979;
-    --white: #000000;
-    --grey: rgb(0, 0, 0);
+    --main-alt: #000000;
+    --bg: #ffffff;
+    --bg-alt: #000000;
+    --fg: #000000;
+    --mid: rgb(0, 0, 0);
+    --sliderbg: #ffffff;
 }

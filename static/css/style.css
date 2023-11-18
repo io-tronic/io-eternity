@@ -1,5 +1,5 @@
 .title {
-    color: var(--white);
+    color: var(--fg);
     font-size: xx-large;
 }
 
@@ -27,6 +27,15 @@
     font-size: 1.2em;
 }
 
+.pagecontainer {
+    border: 3px solid var(--main);
+    margin: 8px;
+
+    border-radius: 25px;
+
+    background-color: #ffffff;
+}
+
 .navbar-end {
     display: flex;
     justify-content: center;
@@ -35,20 +44,18 @@
 .navbar-middle {
     width: 100%;
     display: grid;
-    justify-content: center;
-    position: absolute;
-    z-index: -9;
+    justify-content: left;
+}
+
+.navbar-start {
+    flex-shrink: 0;
+    height:fit-content;
 }
 
 .socials {
     width: 80%;
-    margin-top: 10px;
     display: flex;
     justify-content: space-around;
-}
-
-.social {
-    margin-right: 20px;
 }
 
 .work {
@@ -84,13 +91,19 @@
 }
 
 nav.navbar {
-    background-color: var(--dark);
-    justify-content: people-between;
+    align-self: center;
+
+    display: flex;
+    grid-template-columns: 2fr 1fr;
+    
+
+    background-color: var(--bg);
     align-items: center;
     height: unset !important;
-    margin-left: 2em;
-    margin-right: 2em;
-    padding-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+
 }
 
 .navbar-burger {
@@ -99,8 +112,36 @@ nav.navbar {
 }
 
 .menu {
-    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.menu a {
+    flex: 1 0 max-content;
+    text-align: center;
+    border: 3px solid var(--main);
+    border-radius: 25px;
+    padding: 0.5em;
+    margin: 0.25em;
+
+    min-width: 80px;
+}
+
+.menu a:hover {
+    font-weight: bold;
+}
+
+.menu a.active {
+    font-weight: bold;
+    color: var(--bg);
+    background: var(--main);
+}
+
+
 
 .margin-bottom-50 {
     margin-bottom: 50px;
@@ -163,22 +204,51 @@ a img {
 .slider {
     z-index: 99;
     display: none;
+    grid-template-columns: 1fr;
+    gap: 0;
+
     align-items: center;
     justify-content: center;
     position: fixed;
+    
     overflow-y: scroll;
-    overflow-x: hidden;
-    left: 0;
-    top: 0;
-    width: 100%;
+    overflow-x: visible;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.92);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    opacity: 1;
+}
+
+.sliderbg {
+    display:none;
+    z-index: 50;
+    position:fixed;
+    background-image: url("/noise.jpg");
+    opacity: 0.1;
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    left: 0;
+
 }
 
 .slide {
+    z-index: 100;
+
     justify-content: center;
     justify-items: center;
     box-sizing: border-box;
+
+    border: 3px solid var(--main);
+    border-radius: 25px;
+    background-color: #ffffffff;
+
+    padding: 1em;
+
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .noscroll {
@@ -206,7 +276,7 @@ a img {
 .prev,
 .next {
     cursor: pointer;
-    color: var(--main-light);
+    color: var(--main-alt);
     font-weight: bold;
     font-size: 36px;
     transition: 0.6s ease;
@@ -227,7 +297,7 @@ a img {
 
 .modal-close::before,
 .modal-close::after {
-    background-color: var(--main-light);
+    background-color: var(--main-alt);
 }
 
 .slide-imgs {
@@ -238,7 +308,7 @@ a img {
 
 .fullheight {
     min-height: 100vh;
-    width: 100%;
+    max-width: 100%;
 }
 
 section .column img {
@@ -277,7 +347,7 @@ section .column img {
 }
 
 .grey {
-    color: var(--grey);
+    color: var(--mid);
 }
 
 .slide-info {
@@ -322,12 +392,12 @@ section .column img {
 }
 
 .footer {
-    background-color: var(--dark);
+    background-color: var(--bg);
     color: rgb(245, 245, 245);
 }
 
 .source-love {
-    color: var(--main-light);
+    color: var(--main-alt);
 }
 
 #mobile {
@@ -337,7 +407,8 @@ section .column img {
 .image-box {
     margin-top: 20px;
     overflow: hidden;
-    border: 0px;
+    border: 3px solid var(--main);
+    border-radius: 25px;
 }
 
 .image-box img {
@@ -383,7 +454,7 @@ section .column img {
     border-right: 4px solid;
     border-radius: 4px;
     transform: rotateZ(45deg);
-    color: var(--grey);
+    color: var(--mid);
 }
 
 .hidden {

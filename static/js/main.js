@@ -23,6 +23,7 @@ function openSlider() {
     currentScroll = scrollPosition();
     document.body.classList.add("noscroll");
     document.getElementById('slider').style.display = "grid";
+    document.getElementById('sliderbg').style.display = "block";
     document.addEventListener('keydown', keyboardSlider);
     document.addEventListener('touchstart', handleTouchStart);
     document.addEventListener('touchend', handleTouchEnd);
@@ -30,6 +31,7 @@ function openSlider() {
 
 function closeSlider() {
     document.getElementById('slider').style.display = "none";
+    document.getElementById('sliderbg').style.display = "none";
     document.removeEventListener('keydown', keyboardSlider);
     document.removeEventListener('touchstart', handleTouchStart);
     document.removeEventListener('touchend', handleTouchEnd);

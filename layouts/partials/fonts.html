@@ -1,33 +1,46 @@
 <style>
-    @font-face {
-        font-family: 'Open Sans Regular';
-        src: url({{ "fonts/OpenSans/OpenSans-Regular.ttf" | absURL }}) format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Open Sans Bold';
-        src: url({{ "fonts/OpenSans/OpenSans-Bold.ttf" | absURL }}) format('truetype');
+    /* @font-face {
+        font-family: 'IBM Plex Mono Semibold 600';
+        src: url({{ "fonts/IBM_Plex_Mono/IBMPlexMono-SemiBold.ttf" | absURL }}) format('truetype');
         font-weight: bold;
         font-style: normal;
     }
 
     @font-face {
+        font-family: 'IBM Plex Mono Regular 400 Italic';
+        src: url({{ "fonts/IBM_Plex_Mono/IBMPlexMono-Italic.ttf" | absURL }}) format('truetype');
+        font-weight: normal;
+        font-style: italic;
+    }
+
+    @font-face {
         font-family: 'Open Sans Italic';
-        src: url({{ "fonts/OpenSans/OpenSans-Italic.ttf" | absURL }}) format('truetype');
+        src: url({{ "" | absURL }}) format('truetype');
         font-weight: normal;
         font-style: italic;
     }
 
     @font-face {
         font-family: 'Open Sans Bold Italic';
-        src: url({{ "fonts/OpenSans/OpenSans-BoldItalic.ttf" | absURL }}) format('truetype');
+        src: url({{ "" | absURL }}) format('truetype');
         font-weight: bold;
         font-style: italic;
-    }
+    } */
+
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,600;1,400;1,700&family=Quicksand:wght@500;700&display=swap');
+
 
     body {
-        font-family: "Open Sans Regular";
+        font-family: "Quicksand", sans-serif;
     }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "IBM_Plex_Mono", monospace;
+    }
+
 </style>
