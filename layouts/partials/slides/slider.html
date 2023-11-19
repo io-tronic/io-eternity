@@ -24,6 +24,7 @@
                     {{ $scratch := newScratch }}
                     {{ partial "helpers/get" (dict "scratch" $scratch "row" (index $row "post").Params) }}
                     {{ $img := $scratch.Get "img" }}
+                    {{ $title := (index $row "post").Params.title }}
                     {{ $resizer := "1000x r0" }}
                     {{ with $img.Exif }}
                         {{ if eq .Tags.Orientation 6 }}
@@ -46,6 +47,9 @@
                             height="{{ $img.Height }}"
                             onclick="openSlider();currentSlide({{ (index $row "loopCount") }})"
                             />
+                            <div class="overlay"> 
+                                <h4>{{$title}}</h4>
+                            </div>
                         </div>
                     </div>
                 {{ end }}

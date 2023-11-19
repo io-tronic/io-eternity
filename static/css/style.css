@@ -42,14 +42,14 @@
 }
 
 .navbar-middle {
-    width: 100%;
+    flex: 1 0 400px;
     display: grid;
     justify-content: left;
 }
 
 .navbar-start {
     flex-shrink: 0;
-    height:fit-content;
+    height:auto;
 }
 
 .socials {
@@ -64,7 +64,7 @@
 }
 
 .work-width {
-    width: var(--desktop-work-width);
+    max-width: var(--desktop-work-width);
 }
 
 .enter {
@@ -103,6 +103,7 @@ nav.navbar {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
+    width: fit-content;
 
 }
 
@@ -121,6 +122,7 @@ nav.navbar {
 }
 
 .menu a {
+    position:relative;
     flex: 1 0 max-content;
     text-align: center;
     border: 3px solid var(--main);
@@ -129,16 +131,27 @@ nav.navbar {
     margin: 0.25em;
 
     min-width: 80px;
+
+    box-shadow: 3px 3px 0px var(--main-alt);
 }
 
 .menu a:hover {
+    top: 3px;
+    left: 3px;
     font-weight: bold;
+
+    box-shadow: none;
 }
 
 .menu a.active {
+    top: 3px;
+    left: 3px;
+
     font-weight: bold;
     color: var(--bg);
     background: var(--main);
+
+    box-shadow: none;
 }
 
 
@@ -148,7 +161,7 @@ nav.navbar {
 }
 
 div.logo {
-    height: 5rem;
+    height: auto;
 }
 
 img.logo {
@@ -214,26 +227,13 @@ a img {
     overflow-y: scroll;
     overflow-x: visible;
     height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    top: 0;
+    left: 0;
+    
 
     opacity: 1;
 }
-
-.sliderbg {
-    display:none;
-    z-index: 50;
-    position:fixed;
-    background-image: url("/noise.jpg");
-    opacity: 0.1;
-    height: 100vh;
-    width: 100vw;
-    top:0;
-    left: 0;
-
-}
-
 .slide {
     z-index: 100;
 
@@ -241,19 +241,29 @@ a img {
     justify-items: center;
     box-sizing: border-box;
 
+    flex-wrap: wrap;
+
     border: 3px solid var(--main);
-    border-radius: 25px;
+    border-radius: 20px;
     background-color: #ffffffff;
 
     padding: 1em;
 
     margin-top: 2em;
     margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .noscroll {
     position: fixed;
     overflow: hidden;
+}
+
+.columns {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .slides>.columns {
@@ -382,6 +392,7 @@ section .column img {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
 }
 
 .exif {
@@ -405,21 +416,58 @@ section .column img {
 }
 
 .image-box {
+    transition: all 0.3s ease-in-out;
+    position:relative;
     margin-top: 20px;
-    overflow: hidden;
+    overflow: clip;
     border: 3px solid var(--main);
     border-radius: 25px;
+    
+}
+
+.image-box:hover {
+    box-shadow: 0px 0px 0px 3px var(--bg), 0px 0px 0px 6px var(--main-alt);
+    
 }
 
 .image-box img {
     transition: all 0.3s;
     display: block;
     height: auto;
-    transform: scale(1);
+    transform: scale(1.01);
 }
 
 .image-box:hover img {
-    transform: scale(1.03);
+    transform: scale(1.02);
+}
+
+.image-box .overlay {
+    position: absolute;
+    top: -25%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 0px;
+    width: 100%;
+
+    overflow-y: hidden;
+    opacity: 1;
+    transition: all 0.3s ease;
+    background-color: var(--bg);
+
+    border-bottom: 3px solid var(--main);
+
+}
+
+.overlay h4 {
+    margin:0.5em;
+}
+
+.image-box:hover .overlay {
+    top:0;
+    opacity: 1;
+    height: max-content;
 }
 
 .slide-imgs .columns {

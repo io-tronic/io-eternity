@@ -10,8 +10,8 @@
 {{ if or (and (gt (len $imgs) 1) (not .ctx.Params.multipleColumn)) (gt (len .ctx.Content) 0) }}
 	{{ $includesInfo = true }}
 {{ end }}
-<div class="slide" {{ if $includesInfo }} info="true" {{ end }} path="{{ $.ctx.Page.RelPermalink }}">
-	<div>
+<div class="slide work-width" {{ if $includesInfo }} info="true" {{ end }} path="{{ $.ctx.Page.RelPermalink }}">
+	
 		<div class="slide-imgs {{ if not $.disableFullheight }} fullheight {{end}}">
 			<div>
 				{{ if not .ctx.Site.Params.MoveIt }}
@@ -71,5 +71,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	
 </div>

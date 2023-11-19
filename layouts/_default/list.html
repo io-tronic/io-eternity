@@ -9,8 +9,6 @@
 
 		{{ partial "navbar.html" . }}
 
-		<div class="sliderbg" id="sliderbg"> </div>
-
 		<section id="desktop" class="section work">
 			{{ partial "helpers/hidden-menu.html" . }}
 			{{ partial "slides/slider" (dict "scratch" $portfolioScratch "type" "desktop" "ctx" .) }}
