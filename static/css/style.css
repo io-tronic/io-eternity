@@ -166,7 +166,7 @@ div.logo {
 
 img.logo {
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .welcome-end {
