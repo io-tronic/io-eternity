@@ -490,7 +490,7 @@ section .column img {
     transition: all 0.3s ease-in-out;
     position:relative;
     margin-top: 20px;
-    overflow: clip;
+    overflow: hidden;
     border: 3px solid var(--main);
     border-radius: 25px;
     
