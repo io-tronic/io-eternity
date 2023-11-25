@@ -479,7 +479,7 @@ section .column img {
 
 .footer {
     background-color: var(--bg);
-    color: rgb(245, 245, 245);
+    color: var(--mid);
 }
 
 .source-love {
@@ -491,6 +491,7 @@ section .column img {
 }
 
 .image-box {
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
     position:relative;
     margin-top: 20px;
