@@ -44,17 +44,10 @@
 .content pre.highlight,
 .content .highlight>pre,
 .content td.code pre {
-    background-color: #FAFAFA;
-    background-image: linear-gradient(var(--bg) 50%, var(--bg-alt) 50%);
-    background-repeat: repeat;
-    background-size: 3em 3em;
-    background-position: 0px 10px;
-    border: 1px solid var(--main-alt);
-    border-left: 5px solid var(--main-alt);
-    border-right: 5px solid var(--main-alt);
+    border: 3px solid var(--main);
     margin-top: 1em;
     margin-bottom: 1em;
-    border-radius: 4px;
+    border-radius: 20px;
     font-weight: 700;
     font-size: 1.0em;
 }
@@ -62,6 +55,20 @@
 .content table {
     margin-top: 15px;
     padding: 0;
+
+    border: 3px solid var(--main);
+
+    color: var(--main);
+
+    font-size: small;
+}
+
+.content table thead {
+    border: 3px solid var(--main);
+}
+
+.content table thead tr th{
+    border: 3px solid var(--main);
 }
 
 .content table tr {
