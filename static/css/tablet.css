@@ -18,10 +18,6 @@
         margin-bottom: 15px;
     }
 
-    .social {
-        margin:0.25em
-    }
-
     .welcome-title {
         margin-left: 0px;
     }
@@ -37,7 +33,6 @@
     }
 
     .navbar-middle {
-        all: unset;
         margin-left: auto;
         margin-right: auto;
     }

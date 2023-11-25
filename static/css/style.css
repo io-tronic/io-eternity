@@ -52,12 +52,6 @@
     height:auto;
 }
 
-.socials {
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-}
-
 .work {
     display: grid;
     justify-items: center;
@@ -154,7 +148,16 @@ nav.navbar {
     box-shadow: none;
 }
 
+.social {
+    display: block;
+    margin:0.25em;
+    height: auto;
+}
 
+.social a {
+    display: block;
+    min-width: 100%;
+}
 
 .margin-bottom-50 {
     margin-bottom: 50px;
