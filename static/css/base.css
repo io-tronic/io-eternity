@@ -71,17 +71,17 @@ a {
     word-break: break-word;
 }
 
-a:hover,
+a:is(:hover, :focus),
 a.active {
     color: var(--fg);
 }
 
-a:hover,
+a:is(:hover, :focus),
 a.active {
     border-bottom: 5px solid var(--main);
 }
 
-.a-clean:hover,
+.a-clean:is(:hover, :focus),
 a-clean.active {
     border-bottom: unset;
 }

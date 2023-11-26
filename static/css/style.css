@@ -117,19 +117,19 @@ nav.navbar {
 
 .menu a {
     position:relative;
-    flex: 1 0 max-content;
+    flex: 1 0 auto;
     text-align: center;
     border: 3px solid var(--main);
     border-radius: 25px;
     padding: 0.5em;
     margin: 0.25em;
 
-    min-width: 80px;
+    min-width: auto;
 
     box-shadow: 3px 3px 0px var(--main-alt);
 }
 
-.menu a:hover {
+.menu a:is(:hover, :focus) {
     top: 3px;
     left: 3px;
     font-weight: bold;
@@ -144,6 +144,7 @@ nav.navbar {
     font-weight: bold;
     color: var(--bg);
     background: var(--main);
+    
 
     box-shadow: none;
 }
@@ -268,6 +269,10 @@ a img {
     overflow: hidden;
 }
 
+.noscroll .pagecontainer>nav {
+    display: none !important;
+}
+
 .columns {
     margin-left: 0;
     margin-right: 0;
@@ -295,12 +300,13 @@ a img {
     opacity: 0.5;
 }
 
-.navigate:hover {
+.navigate:is(:hover, :focus-within) {
     opacity: 1;
 }
 
 .prev,
 .next {
+    all:unset;
     cursor: pointer;
     color: var(--main-alt);
     font-weight: bold;
@@ -309,6 +315,10 @@ a img {
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
+}
+
+.navigate button:is(:hover, :focus-within) {
+    border-bottom: 5px solid var(--main)
 }
 
 .next {
@@ -333,32 +343,6 @@ a img {
     background-color: var(--main-alt);
 }
 
-/* 
-.close-button {
-    flex: 0 0 35px;
-
-    width: 35px;
-    height: 35px;
-
-    border: 3px solid var(--main);
-    border-radius: 50%;
-
-    background: var(--bg);
-    color: var(--main);
-
-    
-}
-
-.close-button p {
-    position: relative;
-    top: -0.em;
-    font-size: x-large;
-}
-
-.close-button:hover {
-    background: var(--main);
-    color: var(--bg);
-} */
 
 .slide-imgs {
     position: static;
@@ -498,10 +482,11 @@ section .column img {
     overflow: hidden;
     border: 3px solid var(--main);
     border-radius: 25px;
+    padding: 0;
     
 }
 
-.image-box:hover {
+.image-box:is(:hover, :focus) {
     box-shadow: 0px 0px 0px 3px var(--bg), 0px 0px 0px 6px var(--main-alt);
     
 }
@@ -513,7 +498,7 @@ section .column img {
     transform: scale(1.01);
 }
 
-.image-box:hover img {
+.image-box:hover img, .image-box:focus img {
     transform: scale(1.02);
 }
 
@@ -540,7 +525,7 @@ section .column img {
     margin:0.5em;
 }
 
-.image-box:hover .overlay {
+.image-box:hover .overlay, .image-box:focus .overlay {
     top:0;
     opacity: 1;
     height: max-content;
