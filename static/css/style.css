@@ -267,10 +267,7 @@ a img {
 .noscroll {
     position: fixed;
     overflow: hidden;
-}
-
-.noscroll .pagecontainer>nav {
-    display: none !important;
+    width: 100%;
 }
 
 .columns {
@@ -346,7 +343,7 @@ a img {
 
 .slide-imgs {
     position: static;
-    overflow: hidden;
+    overflow: visible;
     display: grid;
     grid-template-columns: 100%;
     justify-content: center;
@@ -376,7 +373,7 @@ section .column img {
 
 .slide img {
     width: auto;
-    max-height: 75vh;
+    max-height: 90vh;
     max-width: 100%;
     border: 3px solid var(--main);
     box-shadow: 3px 3px 0px var(--main-alt);
@@ -433,7 +430,9 @@ section .column img {
 
 .slide-meta-title {
     text-align: center;
-    font-size: x-large;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 300;
     width: 100%;
 
     border-bottom: 3px solid var(--main);
