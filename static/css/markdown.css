@@ -106,3 +106,17 @@
 .content table tr td :last-child {
     margin-bottom: 0;
 }
+
+.content .md__image {
+    margin-top: 4em;
+}
+
+
+.content p{
+    hyphens: auto;
+    text-align: justify;
+}
+
+.footer .content p {
+    text-align:center;
+}
