@@ -1,0 +1,2 @@
+{{- $modifier := .Get 1 -}}
+{{- $style := .Get 0 -}}<div class="content-cols {{- with $modifier }} {{ . }}{{ end }}" {{- with $style }} style="{{ . }}"{{ end }}>{{- .Inner -}}</div>

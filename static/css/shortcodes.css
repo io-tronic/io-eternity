@@ -1,0 +1,42 @@
+
+.grid-2 {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3 {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-4 {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.flex-cols {
+  display: flex;
+  gap: 2rem;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+
+
+.content-cols>figure{
+  margin: 0;
+}
+
+.content-cols>p:empty {
+  display: none;
+}
+
+.content-cols>p:empty + figure,
+.content-cols>p:empty + figure>img {
+  margin-top: 0;
+}

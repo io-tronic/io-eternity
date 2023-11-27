@@ -1,0 +1,4 @@
+{{- $modifiers := .Get 0 -}}
+<div class="flex-cols{{ with $modifiers }} {{ . }}{{ end }}">
+  {{- .Inner -}}
+</div>

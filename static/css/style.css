@@ -413,6 +413,7 @@ section .column img {
 .slide-info {
     margin-bottom: 30px;
     margin-left: 20px;
+    margin-right: 20px;
     font-size: medium;
     width: 800px;
 }
@@ -590,3 +591,8 @@ section .column img {
         margin-top: 0;
     }
 }
+
+.content figure{
+    margin: 0;
+    max-height: 100vh;
+  }

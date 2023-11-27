@@ -45,7 +45,8 @@
     }
 
     .slide-info {
-        margin-left: 0px;
+        margin-left: 1rem;
+        margin-right:1rem
     }
 
     .slide-imgs .columns .column:not(:first-child) {

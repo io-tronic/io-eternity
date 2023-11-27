@@ -107,16 +107,18 @@
     margin-bottom: 0;
 }
 
-.content .md__image {
-    margin-top: 4em;
-}
 
 
-.content p{
+.content p {
     hyphens: auto;
     text-align: justify;
 }
 
 .footer .content p {
     text-align:center;
+}
+
+.content hr {
+    height: 3px;
+    background-color: var(--main);
 }
