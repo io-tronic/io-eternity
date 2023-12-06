@@ -20,6 +20,8 @@
 .flex-cols {
   display: flex;
   gap: 2rem;
+  margin-left: calc(50% - 37.5vw + 3rem);
+  margin-right: calc(50% - 37.5vw + 3rem);
 }
 
 .flex-wrap {
@@ -37,6 +39,7 @@
 }
 
 .content-cols>p:empty + figure,
-.content-cols>p:empty + figure>img {
+.content-cols>p:empty + figure>img,
+.content-cols>p:empty + figure>video {
   margin-top: 0;
 }

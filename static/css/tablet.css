@@ -68,4 +68,9 @@
     .slide {
         max-width: calc(100vw - 2em);
     }
+
+    .flex-cols {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }

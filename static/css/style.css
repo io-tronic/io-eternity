@@ -181,7 +181,8 @@ img.logo {
     font-size: smaller;
 }
 
-img {
+img,
+video{
     margin: auto;
     display: block;
     height: auto;
@@ -358,7 +359,8 @@ a img {
     max-width: 100%;
 }
 
-section .column img {
+section .column img,
+section .column video {
     cursor: pointer;
     max-width: 100%;
 }
@@ -371,7 +373,8 @@ section .column img {
     max-width: 920px;
 }
 
-.slide img {
+.slide img,
+.slide video {
     width: auto;
     max-height: 90vh;
     max-width: 100%;

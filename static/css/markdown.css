@@ -111,6 +111,7 @@
 
 .content p {
     hyphens: auto;
+    -webkit-hyphens: auto;
     text-align: justify;
 }
 

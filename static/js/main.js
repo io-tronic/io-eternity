@@ -24,8 +24,8 @@ function openSlider() {
     document.body.classList.add("noscroll");
     document.getElementById('slider').style.display = "grid";
     document.addEventListener('keydown', keyboardSlider);
-    document.addEventListener('touchstart', handleTouchStart);
-    document.addEventListener('touchend', handleTouchEnd);
+    // document.addEventListener('touchstart', handleTouchStart);
+    // document.addEventListener('touchend', handleTouchEnd);
 }
 
 function closeSlider() {
